@@ -25,7 +25,7 @@ const getIcon = (icon) => {
 };
 
 const getWeather = async (city) => {
-  const token = await getKeyValue(TOKEN_DICTIONARY.token);
+  const token = await getKeyValue(TOKEN_DICTIONARY.token ?? '6180edccb663b16fad13e1857853e96d');
 
   if (!token) {
     throw new Error('Не задан ключ API, задайте его через команду -t [API_KEY]');

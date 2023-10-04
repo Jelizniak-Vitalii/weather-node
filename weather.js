@@ -60,7 +60,6 @@ const initCLI = () => {
 
   if (args.s) {
     saveCity(args.s);
-
   }
 
   getForcast();
