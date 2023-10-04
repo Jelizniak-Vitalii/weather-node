@@ -37,13 +37,14 @@ const getForcast = async () => {
     const weather = await getWeather(process.env.CITY ?? 'kiev');
     printWeather(weather, getIcon(weather.weather[0].icon));
   } catch (e) {
-    if (e?.response.status === 404) {
-      printError('Неверно указан город');
-    } else if (e?.response.status === 401) {
-      printError('Неверно указан token');
-    } else {
-      printError(e?.message);
-    }
+    console.log(e);
+    // if (e?.response.status === 404) {
+    //   printError('Неверно указан город');
+    // } else if (e?.response.status === 401) {
+    //   printError('Неверно указан token');
+    // } else {
+    //   printError(e?.message);
+    // }
   }
 };
 
